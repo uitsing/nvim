@@ -18,8 +18,8 @@ map('n', '<C-p>', ':Telescope find_files<CR>', { noremap = true })
 require('language_server')
 require('compe_setting')
 
--- vim.o.background = "dark" -- or "light" for light mode
--- vim.cmd([[colorscheme gruvbox]])
+vim.o.background = "dark" -- or "light" for light mode
+vim.cmd([[colorscheme gruvbox]])
 
 
 require'nvim-treesitter.configs'.setup {

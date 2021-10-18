@@ -19,7 +19,7 @@ return require('packer').startup(function()
   use 'mattn/emmet-vim'
   -- use 'elixir-editors/vim-elixir'
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-  use {"npxbr/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
+  use 'gruvbox-community/gruvbox'
   use { 'nvim-telescope/telescope.nvim',
     requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
   }
