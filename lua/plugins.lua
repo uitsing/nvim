@@ -38,5 +38,12 @@ return require('packer').startup(function()
   -- getgu
   use 'ThePrimeagen/vim-be-good'
 
+  -- github copilot
+  use 'github/copilot.vim'
+
+  -- harpoon
+  use 'nvim-lua/plenary.nvim'
+  use 'ThePrimeagen/harpoon'
+
 end)
 

@@ -2,7 +2,7 @@ require('plugins')
 
 local o = vim.o
 o.number = true
-o.relativenumber = true
+o.relativenumber = false
 o.shiftwidth = 2
 o.mouse = 'nv'
 o.expandtab = true
@@ -13,6 +13,8 @@ o.signcolumn = 'number'
 local map = vim.api.nvim_set_keymap
 map('n', '<C-n>', ':NERDTreeToggle<CR>', { noremap = true })
 map('n', '<C-p>', ':Telescope find_files<CR>', { noremap = true })
+map('n', '<C-h>', ':lua require("harpoon.ui").toggle_quick_menu()<CR>', { noremap = true })
+map('n', '<C-a>', ':lua require("harpoon.mark").add_file()<CR>', { noremap = true })
 
 
 require('language_server')
