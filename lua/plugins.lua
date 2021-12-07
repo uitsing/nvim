@@ -28,7 +28,7 @@ return require('packer').startup(function()
 
   -- language server configurations
   use 'neovim/nvim-lspconfig'
-  use 'kabouzeid/nvim-lspinstall'
+  use 'williamboman/nvim-lsp-installer'
 
   -- autocomplete and snippets
   use 'hrsh7th/nvim-compe'

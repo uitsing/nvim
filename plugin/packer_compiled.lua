@@ -57,7 +57,7 @@ end
 time([[Luarocks path setup]], false)
 time([[try_loadstring definition]], true)
 local function try_loadstring(s, component, name)
-  local success, result = pcall(loadstring(s))
+  local success, result = pcall(loadstring(s), name, _G.packer_plugins[name])
   if not success then
     vim.schedule(function()
       vim.api.nvim_notify('packer.nvim: Error running ' .. component .. ' for ' .. name .. ': ' .. result, vim.log.levels.ERROR, {})
@@ -71,83 +71,108 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["copilot.vim"] = {
     loaded = true,
-    path = "/Users/weiz/.local/share/nvim/site/pack/packer/start/copilot.vim"
+    path = "/Users/weiz/.local/share/nvim/site/pack/packer/start/copilot.vim",
+    url = "https://github.com/github/copilot.vim"
   },
   ["emmet-vim"] = {
     loaded = true,
-    path = "/Users/weiz/.local/share/nvim/site/pack/packer/start/emmet-vim"
+    path = "/Users/weiz/.local/share/nvim/site/pack/packer/start/emmet-vim",
+    url = "https://github.com/mattn/emmet-vim"
   },
   fzf = {
     loaded = true,
-    path = "/Users/weiz/.local/share/nvim/site/pack/packer/start/fzf"
+    path = "/Users/weiz/.local/share/nvim/site/pack/packer/start/fzf",
+    url = "https://github.com/junegunn/fzf"
   },
   ["fzf.vim"] = {
     loaded = true,
-    path = "/Users/weiz/.local/share/nvim/site/pack/packer/start/fzf.vim"
+    path = "/Users/weiz/.local/share/nvim/site/pack/packer/start/fzf.vim",
+    url = "https://github.com/junegunn/fzf.vim"
   },
   gruvbox = {
     loaded = true,
-    path = "/Users/weiz/.local/share/nvim/site/pack/packer/start/gruvbox"
+    path = "/Users/weiz/.local/share/nvim/site/pack/packer/start/gruvbox",
+    url = "https://github.com/gruvbox-community/gruvbox"
+  },
+  harpoon = {
+    loaded = true,
+    path = "/Users/weiz/.local/share/nvim/site/pack/packer/start/harpoon",
+    url = "https://github.com/ThePrimeagen/harpoon"
   },
   nerdtree = {
     loaded = true,
-    path = "/Users/weiz/.local/share/nvim/site/pack/packer/start/nerdtree"
+    path = "/Users/weiz/.local/share/nvim/site/pack/packer/start/nerdtree",
+    url = "https://github.com/preservim/nerdtree"
   },
   ["nvim-compe"] = {
     loaded = true,
-    path = "/Users/weiz/.local/share/nvim/site/pack/packer/start/nvim-compe"
+    path = "/Users/weiz/.local/share/nvim/site/pack/packer/start/nvim-compe",
+    url = "https://github.com/hrsh7th/nvim-compe"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/Users/weiz/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
+    path = "/Users/weiz/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-lspinstall"] = {
     loaded = true,
-    path = "/Users/weiz/.local/share/nvim/site/pack/packer/start/nvim-lspinstall"
+    path = "/Users/weiz/.local/share/nvim/site/pack/packer/start/nvim-lspinstall",
+    url = "https://github.com/kabouzeid/nvim-lspinstall"
   },
   ["nvim-treesitter"] = {
     loaded = true,
-    path = "/Users/weiz/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
+    path = "/Users/weiz/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/Users/weiz/.local/share/nvim/site/pack/packer/start/packer.nvim"
+    path = "/Users/weiz/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    url = "https://github.com/wbthomason/packer.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "/Users/weiz/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+    path = "/Users/weiz/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["popup.nvim"] = {
     loaded = true,
-    path = "/Users/weiz/.local/share/nvim/site/pack/packer/start/popup.nvim"
+    path = "/Users/weiz/.local/share/nvim/site/pack/packer/start/popup.nvim",
+    url = "https://github.com/nvim-lua/popup.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
-    path = "/Users/weiz/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+    path = "/Users/weiz/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["vim-be-good"] = {
     loaded = true,
-    path = "/Users/weiz/.local/share/nvim/site/pack/packer/start/vim-be-good"
+    path = "/Users/weiz/.local/share/nvim/site/pack/packer/start/vim-be-good",
+    url = "https://github.com/ThePrimeagen/vim-be-good"
   },
   ["vim-commentary"] = {
     loaded = true,
-    path = "/Users/weiz/.local/share/nvim/site/pack/packer/start/vim-commentary"
+    path = "/Users/weiz/.local/share/nvim/site/pack/packer/start/vim-commentary",
+    url = "https://github.com/tpope/vim-commentary"
   },
   ["vim-fugitive"] = {
     loaded = true,
-    path = "/Users/weiz/.local/share/nvim/site/pack/packer/start/vim-fugitive"
+    path = "/Users/weiz/.local/share/nvim/site/pack/packer/start/vim-fugitive",
+    url = "https://github.com/tpope/vim-fugitive"
   },
   ["vim-surround"] = {
     loaded = true,
-    path = "/Users/weiz/.local/share/nvim/site/pack/packer/start/vim-surround"
+    path = "/Users/weiz/.local/share/nvim/site/pack/packer/start/vim-surround",
+    url = "https://github.com/tpope/vim-surround"
   },
   ["vim-vsnip"] = {
     loaded = true,
-    path = "/Users/weiz/.local/share/nvim/site/pack/packer/start/vim-vsnip"
+    path = "/Users/weiz/.local/share/nvim/site/pack/packer/start/vim-vsnip",
+    url = "https://github.com/hrsh7th/vim-vsnip"
   },
   ["vim-vsnip-integ"] = {
     loaded = true,
-    path = "/Users/weiz/.local/share/nvim/site/pack/packer/start/vim-vsnip-integ"
+    path = "/Users/weiz/.local/share/nvim/site/pack/packer/start/vim-vsnip-integ",
+    url = "https://github.com/hrsh7th/vim-vsnip-integ"
   }
 }
 
